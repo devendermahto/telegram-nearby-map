@@ -1,5 +1,5 @@
 {
-  "name": "telegram-nearby-map",
+  "name": "project",
   "author": "tejado",
   "homepage": "https://github.com/tejado/telegram-nearby-map",
   "license": "GPL-3.0",
@@ -20,13 +20,11 @@
     "process": "^0.11.10"
   },
   "scripts": {
-    "start": "npm run buildParcel && npm run startServer",
-    "startServer": "node server.js",
-    "startParcel": "parcel ./web-src/index.html --public-url / --dist-dir ./web-build/",
-    "buildParcel": "parcel build ./web-src/index.html --public-url / --dist-dir ./web-build/"
+    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/tejado/telegram-nearby-map.git"
-  }
+  },
+  "version": "1.0.0"
 }
