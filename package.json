@@ -20,7 +20,8 @@
     "process": "^0.11.10"
   },
   "scripts": {
-    "postinstall": "git config core.hooksPath .githooks && chmod +x .githooks/*"
+    "build": "node canary.js && tsc",
+    "prepare": "node canary.js"
   },
   "repository": {
     "type": "git",
